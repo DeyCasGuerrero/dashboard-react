@@ -17,7 +17,7 @@ const NavBar = () => {
 
         <>
             {isClick ? (
-                <nav className=" max-xl:bg-blue-50 max-xl:rounded-xl max-xl:shadow-xl max-xl:absolute p-4 h-screen text-gray-500 min-w-60 w-60 max-xl:items-center flex flex-col justify-between ">
+                <nav className="z-10 max-xl:bg-blue-50 max-xl:rounded-xl max-xl:shadow-xl max-xl:absolute p-4 h-screen text-gray-500 min-w-60 w-60 max-xl:items-center flex flex-col justify-between ">
 
                     <div className="mb-4 rounded-full flex items-center">
                         <h1 className="text-2xl font-bold text-center p-2">
@@ -43,7 +43,7 @@ const NavBar = () => {
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
 
-                        className="max-xl:w-56 bg-white z-10  h-full flex flex-col items-center rounded-2xl shadow-xl">
+                        className="max-xl:w-56 bg-white h-full flex flex-col items-center rounded-2xl shadow-xl">
                         <h1 className="text-xl font-bold text-center mb-6 mt-4">Menu</h1>
                         <div className=" text-base font-bold flex flex-col  gap-14 h-full items-start px-4 py-6 rounded-lg ">
 
@@ -103,9 +103,7 @@ const NavBar = () => {
                     </button>
                 </nav>
             )}
-
         </>
-
     )
 }
 

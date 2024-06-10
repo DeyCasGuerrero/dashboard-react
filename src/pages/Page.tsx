@@ -6,11 +6,9 @@ const PageDashBoard = () => {
 
     return (
         <main className="bg-blue-50 min-h-screen max-xl:flex-col  flex items-start justify-between ">
-           
             <NavBar />
             <ComponentDashBoard />
-      
-            <UserSectionComponent/>
+            <UserSectionComponent />
         </main>
     )
 }

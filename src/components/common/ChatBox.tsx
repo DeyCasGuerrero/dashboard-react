@@ -1,6 +1,6 @@
 const ChatBox = () => {
     return (
-        <form className="p-6 rounded-md ">
+        <form className="p-6 rounded-md w-full bg-slate-200 ">
             <div className="flex items-center border border-gray-300 rounded-md">
                 <input
                     className="flex-grow p-2 border-none focus:ring-0 focus:outline-none"
