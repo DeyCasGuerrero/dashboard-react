@@ -1,6 +1,7 @@
 import ChatBox from "./common/ChatBox";
 import GraphicsChartJs from "./common/Graphics";
 import GraphicModel from "./common/GraphicsCards";
+import { motion } from "framer-motion"
 
 const ComponentDashBoard = () => {
     return (
@@ -35,12 +36,24 @@ const ComponentDashBoard = () => {
                         <GraphicModel></GraphicModel>
                     </div>
 
-                    <div className="bg-white lg:col-span-3 rounded-3xl flex flex-col items-start shadow-xl">
+                    <motion.div 
+                        initial={{
+                            opacity: 0,
+                        }}
+                        animate={{
+                            opacity: 1,
+                        }}
+                        transition={{
+                            duration: 0.4,
+                            delay: 0.3,
+                            ease: 'easeInOut',
+                        }}
+                        className="bg-white lg:col-span-3 rounded-3xl flex flex-col items-start shadow-xl">
                         <h1 className="mt-4 ml-4 text-2xl font-bold">Graficas</h1>
                         <div className="flex flex-col w-full p-8">
                             <GraphicsChartJs />
                         </div>
-                    </div>
+                    </motion.div>
 
                     <div className=" lg:col-span-3 grid grid-cols-3  w-full gap-4 ">
                         <div className="lg:col-span-2 h-96 bg-white flex flex-col items-center shadow-xl p-8 rounded-3xl overflow-y-auto">
@@ -61,15 +74,12 @@ const ComponentDashBoard = () => {
                             </div>
                         </div>
 
-                        <div className=" max-h-36 bg-white rounded-3xl">
+                        <div className=" max-h-32 flex items-center justify-center bg-white rounded-3xl">
                             <div>
                                 <ChatBox />
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

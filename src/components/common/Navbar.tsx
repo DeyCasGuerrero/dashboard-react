@@ -1,6 +1,7 @@
 import { AiFillLayout, AiOutlineUser, AiFillSetting, AiFillWarning, AiTwotonePieChart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { MdLogout } from 'react-icons/md';
+import { motion } from "framer-motion"
 
 const NavBar = () => {
     return (
@@ -15,7 +16,15 @@ const NavBar = () => {
                 </h1>
             </div>
 
-            <aside className=" bg-white z-10 flex-grow overflow-auto h-full flex flex-col items-center rounded-2xl shadow-xl">
+            <motion.aside
+                initial={{ x: "-300vh", opacity: 0 }}
+                animate={{ x: "0", opacity: 1 }}
+                transition={{
+                    duration: 0.4,
+                    ease: [0, 0.71, 0.2, 1.01],
+                }}
+
+                className=" bg-white z-10 flex-grow overflow-auto h-full flex flex-col items-center rounded-2xl shadow-xl">
                 <h1 className="text-xl font-bold text-center mb-6 mt-4">Menu</h1>
                 <div className="text-base font-bold flex flex-col  gap-14 h-full items-start px-4 py-6 rounded-lg ">
 
@@ -65,7 +74,7 @@ const NavBar = () => {
 
                 </div>
 
-            </aside>
+            </motion.aside>
         </nav>
     )
 }

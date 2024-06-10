@@ -3,10 +3,11 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import { Bar, Line, Doughnut, Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { data as GraphicModel } from '../../utils/GraphicModel'; 
+import { ChartJsTypes } from '../../types/ChartJsTypes';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const GraphicsChartJs: React.FC = () => {
+const GraphicsChartJs: React.FC<ChartJsTypes> = ({type='Line'}) => {
     const chartContainerRef = useRef<HTMLDivElement | null>(null);
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
@@ -22,7 +23,7 @@ const GraphicsChartJs: React.FC = () => {
         responsive: true,
         scales: {
             x: {
-                grid: {
+                grid: {   //valores en el eje x
                     display: false,
                 },
                 title: {
@@ -35,7 +36,7 @@ const GraphicsChartJs: React.FC = () => {
                 },
             },
             y: {
-                beginAtZero: true,
+                beginAtZero: true, // valores en el eje y
                 grid: {
                     color: '#e2e8f0',
                 },
@@ -56,8 +57,8 @@ const GraphicsChartJs: React.FC = () => {
         },
         plugins: {
             legend: {
-                display: true,
-                position: 'top' as const,  // Especificar el tipo literal
+                display: true,  //para el label pricipal del grafico
+                position: 'top' as const,
                 labels: {
                     font: {
                         size: 14,
@@ -66,12 +67,12 @@ const GraphicsChartJs: React.FC = () => {
                 },
             },
             tooltip: {
-                enabled: true,
-                mode: 'index' as const,  // Especificar el tipo literal
+                enabled: true,  //para valores dentro de la grafica
+                mode: 'index' as const, 
                 intersect: false,
                 callbacks: {
                     label: function(tooltipItem:any) {
-                        return `$${tooltipItem.raw}`;
+                        return `$${tooltipItem.raw} gastos`;
                     },
                 },
             },

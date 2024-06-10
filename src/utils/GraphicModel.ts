@@ -3,7 +3,7 @@ export const data = {
         'Junio', 'Julio', 'Agosto', 'Septiembre',
         'Octubre', 'Noviembre', 'Diciembre'],
     datasets: [{
-        label: 'Control',
+        label: 'Control de tus gastos',
         data: [12, 19, 3, 5, 2, 3, 8,9,14,6,20,12],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
