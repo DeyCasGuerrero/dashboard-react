@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import { Bar, Line, Doughnut, Pie } from 'react-chartjs-2';
+import {  Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { data as GraphicModel } from '../../utils/GraphicModel'; 
 import { ChartJsTypes } from '../../types/ChartJsTypes';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const GraphicsChartJs: React.FC<ChartJsTypes> = ({type='Line'}) => {
+const GraphicsChartJs: React.FC<ChartJsTypes> = () => {
     const chartContainerRef = useRef<HTMLDivElement | null>(null);
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
