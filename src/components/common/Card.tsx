@@ -17,7 +17,7 @@ const ComponentCards = () => {
             className="flex items-center p-8 w-full h-52 bg-white rounded-3xl shadow-lg">
             <section className="flex justify-center items-center w-24 h-24 
                 hover:cursor-pointer hover:scale-110 duration-300">
-                <img src="/src/assets/logo.png" alt="profile" className="border-2 border-green-500" />
+                <img src="/public/logo.png" alt="profile" className="border-2 border-green-500" />
             </section>
 
             <section className="block border-l border-gray-300 m-3">
