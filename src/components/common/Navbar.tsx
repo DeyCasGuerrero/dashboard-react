@@ -1,31 +1,70 @@
+import { AiFillLayout, AiOutlineUser, AiFillSetting, AiFillWarning, AiTwotonePieChart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { MdLogout } from 'react-icons/md';
 
 const NavBar = () => {
     return (
-        <nav className="h-screen text-black w-80 p-4 flex flex-col justify-between overflow-hidden">
-            <div className=" flex items-center gap-4 mb-4  rounded-full">
-                <img className="rounded-full w-16 h-16" src="/src/assets/logo.png" alt="logo" />
-                <h1 className="text-xl font-bold text-red-500">Dashboard</h1>
+        <nav className="p-4 h-screen text-gray-500 min-w-60  flex flex-col justify-between ">
+            <div className="mb-4 rounded-full">
+                <h1 className="text-2xl font-bold text-center p-2">
+                    <span className='text-red-600'>Y</span>
+                    <span className='text-green-500'>a</span>
+                    <span className='text-orange-500'>n</span>
+                    <span className='text-purple-600'>a</span>
+                    PayTa
+                </h1>
             </div>
 
-            <aside className=" bg-white z-10 flex-grow overflow-auto h-full flex flex-col items-center p-4 rounded-2xl shadow-xl">
-                <h1 className="text-xl font-bold text-center mb-6">Dashboard</h1>
-                <div className="text-base font-bold space-y-4 flex flex-col justify-evenly h-full w-full px-4 py-6 rounded-lg ">
-                    <a className="p-4  transition-colors duration-300 text-center">
-                        Home
-                    </a>
-                    <a className="p-4  transition-colors duration-300 text-center">
-                        User
-                    </a>
-                    <a className="p-4  transition-colors duration-300 text-center">
-                        Analytics
-                    </a>
-                    <a className="p-4  transition-colors duration-300 text-center">
-                        Settings
-                    </a>
-                    <a className="p-4  transition-colors duration-300 text-center">
-                        Help
-                    </a>
+            <aside className=" bg-white z-10 flex-grow overflow-auto h-full flex flex-col items-center rounded-2xl shadow-xl">
+                <h1 className="text-xl font-bold text-center mb-6 mt-4">Menu</h1>
+                <div className="text-base font-bold flex flex-col  gap-14 h-full items-start px-4 py-6 rounded-lg ">
+
+                    <Link to={"/"} className="hover:text-blue-500 transform hover:translate-x-5 transition-transform duration-300 flex items-center">
+                        <span className="group flex items-center flex-row">
+                            <AiFillLayout className="text-gray-500 group-hover:text-blue-500" size={25} />
+                            <span className="ml-1">Home</span>
+                        </span>
+                    </Link>
+
+                    <Link to={"/"} className="hover:text-blue-500  transform hover:translate-x-5 transition-transform duration-300 flex items-center">
+                        <span className="group flex items-center flex-row">
+                            <AiOutlineUser className="text-gray-500 group-hover:text-blue-500" size={25} />
+                            <span className="ml-1">User</span>
+                        </span>
+                    </Link>
+
+                    <Link to={"/"} className="hover:text-blue-500 transform hover:translate-x-5 transition-transform duration-300  flex items-center">
+                        <span className="group flex items-center flex-row">
+                            <AiTwotonePieChart className="text-gray-500 group-hover:text-blue-500" size={25} />
+                            <span className="ml-1">Analytics</span>
+                        </span>
+                    </Link>
+
+                    <Link to={"/"} className="hover:text-blue-500 transform hover:translate-x-5 transition-transform duration-300  flex items-center">
+                        <span className="group flex items-center flex-row">
+                            <AiFillSetting className="text-gray-500 group-hover:text-blue-500" size={25} />
+                            <span className="ml-1">Settings</span>
+                        </span>
+                    </Link>
+
+                    <Link to={""} className="hover:text-blue-500 transform hover:translate-x-5 transition-transform duration-300  flex items-center">
+                        <span className="group flex items-center flex-row">
+                            <AiFillWarning className="text-gray-500 group-hover:text-blue-500" size={25} />
+                            <span className="ml-1">Reports</span>
+                        </span>
+                    </Link>
+
+                    <div className="mt-auto">
+                        <Link to={""} className="hover:text-blue-500 transform hover:scale-110 transition-transform duration-300  flex items-center">
+                            <span className="group flex items-center flex-row">
+                                <MdLogout className="text-gray-500 group-hover:text-blue-500" size={25} />
+                                <span className="ml-1">LogOut</span>
+                            </span>
+                        </Link>
+                    </div>
+
                 </div>
+
             </aside>
         </nav>
     )

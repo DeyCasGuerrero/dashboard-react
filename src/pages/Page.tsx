@@ -5,7 +5,7 @@ import NavBar from "../components/common/Navbar";
 const PageDashBoard = () => {
 
     return (
-        <main className="bg-blue-50 flex items-center justify-between ">
+        <main className="bg-blue-50 min-h-screen flex items-start justify-between ">
             <NavBar />
             <ComponentDashBoard />
             <UserSectionComponent/>
