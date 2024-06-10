@@ -1,22 +1,13 @@
-import React, { useRef, useEffect, useState } from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import {  Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
-import { data as GraphicModel } from '../../utils/GraphicModel'; 
+import { data as GraphicModel } from '../../utils/GraphicModel';
 import { ChartJsTypes } from '../../types/ChartJsTypes';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const GraphicsChartJs: React.FC<ChartJsTypes> = () => {
-    const chartContainerRef = useRef<HTMLDivElement | null>(null);
-    const [isMounted, setIsMounted] = useState(false);
-    useEffect(() => {
-        return () => {
-            if (chartContainerRef.current) {
-                setIsMounted(true);
-            }
-        };
-    }, []);
+
 
     const options = {
         maintainAspectRatio: false,
@@ -49,7 +40,7 @@ const GraphicsChartJs: React.FC<ChartJsTypes> = () => {
                     color: 'blue'
                 },
                 ticks: {
-                    callback: function(value:any) {
+                    callback: function (value: any) {
                         return '$' + value;
                     },
                 },
@@ -68,10 +59,10 @@ const GraphicsChartJs: React.FC<ChartJsTypes> = () => {
             },
             tooltip: {
                 enabled: true,  //para valores dentro de la grafica
-                mode: 'index' as const, 
+                mode: 'index' as const,
                 intersect: false,
                 callbacks: {
-                    label: function(tooltipItem:any) {
+                    label: function (tooltipItem: any) {
                         return `$${tooltipItem.raw} gastos`;
                     },
                 },
@@ -92,10 +83,8 @@ const GraphicsChartJs: React.FC<ChartJsTypes> = () => {
     };
 
     return (
-        <div ref={chartContainerRef} className='h-96' >
-            {isMounted && (
-                <Line data={GraphicModel} options={options} />
-            )}
+        <div className='h-96' >
+            <Line data={GraphicModel} options={options} />
         </div>
     );
 };
