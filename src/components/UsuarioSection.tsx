@@ -2,7 +2,7 @@ import ComponentCards from "./common/Card";
 
 const UserSectionComponent = () => {
     return (
-        <section className="h-screen w-1/3 flex flex-col p-4">
+        <section className="h-screen w-1/3 flex flex-col p-4 max-xl:w-full">
             <ComponentCards></ComponentCards>
             <div className="mt-4">
                 <h1 className="font-bold text-2xl  p-4">Tasks</h1>

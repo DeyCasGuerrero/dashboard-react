@@ -1,7 +1,5 @@
 const ChatBox = () => {
     return (
-
-
         <form className="p-6 rounded-md ">
             <div className="flex items-center border border-gray-300 rounded-md">
                 <input
@@ -11,8 +9,6 @@ const ChatBox = () => {
                 />
             </div>
         </form>
-
-
     )
 }
 

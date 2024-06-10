@@ -5,13 +5,13 @@ import { motion } from "framer-motion"
 
 const ComponentDashBoard = () => {
     return (
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden ml-3">
             <div className="flex-grow p-6">
                 <header className="mb-8">
                     <h1 className="text-4xl font-bold text-gray-500">Dashboard</h1>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                <div className="grid grid-cols-1 xl lg:grid-cols-3 gap-6 p-4">
                     <div className="p-6 bg-white rounded-3xl shadow-lg flex flex-row min-w-60 ">
                         <div className=" w-1/2">
                             <h2 className="text-xl font-bold mb-4">Ingresos totales</h2>
@@ -55,8 +55,8 @@ const ComponentDashBoard = () => {
                         </div>
                     </motion.div>
 
-                    <div className=" lg:col-span-3 grid grid-cols-3  w-full gap-4 ">
-                        <div className="lg:col-span-2 h-96 bg-white flex flex-col items-center shadow-xl p-8 rounded-3xl overflow-y-auto">
+                    <div className="lg:col-span-3 grid grid-cols-1  w-full gap-4  ">
+                        <div className="max-lg:col-span-1 lg:col-span-2 h-96 bg-white flex flex-col items-center shadow-xl p-8 rounded-3xl overflow-y-auto">
                             <div className="flex flex-col w-full h-full p-4 space-y-4">
                                 <div className="flex items-start">
                                     <img src="https://pnghive.com/core/images/full/chat-gpt-logo-png-1680405922.png" alt="Avatar" className="rounded-full h-8 w-8 mr-2" />
