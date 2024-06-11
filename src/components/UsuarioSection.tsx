@@ -3,7 +3,7 @@ import RemindsTasks from "./common/RemindsTasks";
 
 const UserSectionComponent = () => {
     return (
-        <section className="h-screen w-1/3 flex flex-col p-4 max-xl:w-full ml-3">
+        <section className=" w-1/3 flex flex-col p-4 max-xl:w-full">
             <ComponentCards></ComponentCards>
             <RemindsTasks></RemindsTasks>
         </section>

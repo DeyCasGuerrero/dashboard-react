@@ -97,8 +97,9 @@ const NavBar = () => {
                 </nav>
 
             ) : (
-                <nav className='hidden max-xl:min-h-screen max-xl:bg-slate-300 max-xl:flex max-xl:items-center max-xl:fixed'>
+                <nav className='  max-xl:bg-slate-300 rounded-full p-2 flex items-center justify-center'>
                     <button onClick={handleClick}>
+                        
                         <AiFillCaretRight size={30} />
                     </button>
                 </nav>

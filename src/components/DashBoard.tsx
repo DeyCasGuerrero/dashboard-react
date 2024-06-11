@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const ComponentDashBoard = () => {
     return (
-        <div className="w-full overflow-hidden ml-3">
+        <div className="w-full overflow-hidden">
             <div className="flex-grow p-6">
                 <motion.header
                     initial={{ opacity: 0, x: -100 }}
